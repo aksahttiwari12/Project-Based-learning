@@ -1,0 +1,122 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+}
+#home{
+     width: 100%;
+     height: 100vh;
+     background-color: black;
+     color: antiquewhite;
+}
+#dropdown{
+    color:white;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px 30px 0px;
+}
+#heading{
+    padding-top: 30px;
+    opacity: 0.7;
+}
+#heading h1{
+    font-size: 8vw;
+}
+#firsth1{
+    margin-left: 80px;
+}
+#secondh1{
+    margin-left: 190px;
+}
+#blocktext{
+    width: fit-content;
+}
+#blocktext p{
+    text-align: right;
+    text-transform: uppercase;
+}
+#extrainfo{
+   text-align: right;
+   text-transform: uppercase;
+   margin-top: 150px;
+   margin-right: 40px;
+   font-size: 20px;
+
+}
+
+#contactinfo{
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+#contactinfo a{
+    color: white;
+}
+#secondpage{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding-top: 200px;
+}
+#elem{
+    width: 85%;
+    border-top: 1px solid #888;
+    padding: 4vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#elem h2{
+    font-size: 5vw;
+    opacity: .5;
+}
+#elem a{
+     color: white;
+     opacity: .5;
+}
+#elem img{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    z-index: 999;
+    display: none;
+}
+
+#thirdpage{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+#aboutme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px; 
+    padding-left: 200px;
+    padding-right: 200px;
+    gap: 50px;
+}
+#aboutme img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+#about content{
+    
+}
