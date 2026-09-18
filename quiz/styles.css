@@ -1,0 +1,150 @@
+:root {
+    --ink: #17213d;
+    --muted: #68708a;
+    --surface: #ffffff;
+    --option: #f4f6ff;
+    --accent: #6157e8;
+    --accent-dark: #4740bd;
+    --shadow: 0 22px 55px rgba(31, 37, 84, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at top left, #dcd8ff 0, transparent 32rem),
+        radial-gradient(circle at bottom right, #bde9f5 0, transparent 28rem),
+        #f8f8ff;
+}
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    letter-spacing: -0.06em;
+}
+
+header h1::after {
+    content: "Test what you know";
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+#questioncard {
+    width: min(100%, 620px);
+    padding: clamp(24px, 5vw, 42px);
+    border: 1px solid rgba(97, 87, 232, 0.14);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+#question {
+    margin-bottom: 26px;
+    font-size: clamp(1.25rem, 3vw, 1.65rem);
+    line-height: 1.35;
+}
+
+/* Keep the real radio inputs accessible while making their labels look like answer cards. */
+#questioncard input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+#questioncard label {
+    display: block;
+    margin: 10px 0;
+    padding: 15px 18px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    color: #303953;
+    background: var(--option);
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+#questioncard label:hover {
+    transform: translateY(-2px);
+    border-color: rgba(97, 87, 232, 0.35);
+    box-shadow: 0 8px 18px rgba(50, 51, 117, 0.1);
+}
+
+#questioncard input[type="radio"]:checked + label {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+    background: #e8e6ff;
+}
+
+#questioncard input[type="radio"]:focus-visible + label {
+    outline: 3px solid rgba(97, 87, 232, 0.35);
+    outline-offset: 3px;
+}
+
+#Submit {
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 14px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent), #877df5);
+    box-shadow: 0 10px 20px rgba(97, 87, 232, 0.28);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#Submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(97, 87, 232, 0.34);
+}
+
+#Submit:active {
+    transform: translateY(0);
+}
+
+#result {
+    width: min(100%, 620px);
+    min-height: 28px;
+    margin-top: 18px;
+    color: var(--accent-dark);
+    text-align: center;
+    font-weight: 750;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 32px 14px;
+    }
+
+    #questioncard {
+        border-radius: 18px;
+    }
+
+    #questioncard label {
+        padding: 14px;
+    }
+}
