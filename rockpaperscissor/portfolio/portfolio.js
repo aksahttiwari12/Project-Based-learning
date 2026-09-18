@@ -1,1 +1,0 @@
-// Target: Smooth scrolling,gsap,scrolltrigger
