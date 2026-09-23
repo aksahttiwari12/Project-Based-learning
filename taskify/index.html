@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Taskify</title>
+</head>
+
+<body>
+    <header>
+        <h1>Taskify</h1>
+    </header>
+    <div class="task-form">
+        <input type="text" placeholder="Task title" id="task-input">
+        <select id="task-difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <select id="task-category">
+            <option value="todo">To-Do</option>
+            <option value="in-progress">In Progress</option>
+            <option value="under-review">Under Review</option>
+            <option value="finished">Finished</option>
+        </select>
+        <button id="add-btn">Add Task</button>
+    </div>
+    <div id="maincontainer">
+        <div id="todo" class="seccontainers">
+            <h2>To-DO</h2>
+            <div class="task-list"></div>
+        </div>
+        <div id="in-progress" class="seccontainers">
+            <h2>In Progress</h2>
+            <div class="task-list"></div>
+        </div>
+        <div id="under-review" class="seccontainers">
+            <h2>Under Review</h2>
+            <div class="task-list"></div>
+        </div>
+        <div id="finished" class="seccontainers">
+            <h2>Finished</h2>
+            <div class="task-list"></div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
